@@ -1,13 +1,12 @@
-# Courier Management System - Comprehensive Guide
+# Courier Management System - GPL Licensed
 
-# Overview
-**Courier Management System** is a robust C++ application that simulates a complete courier service ecosystem with three distinct user roles: customers, delivery companies, and administrators. This system handles end-to-end delivery management including order placement, status tracking, company management, and reporting.
+## Overview
+**Courier Management System** is a robust C++ application that simulates a complete courier service ecosystem with three distinct user roles: customers, delivery companies, and administrators. This GPL-licensed system handles end-to-end delivery management including order placement, status tracking, company management, and reporting.
 
 
+## Key Features
 
-# Key Features
-
-# 1. Multi-Role Authentication System
+### 1. Multi-Role Authentication System
 - **Customers**: Place orders, track deliveries
 - **Delivery Companies**: Update order statuses
 - **Administrators**: Manage companies, generate reports
@@ -19,25 +18,25 @@
 - Special instructions handling
 - Real-time order status tracking (Pending → In Transit → Delivered)
 
-# 3. Company Management
+### 3. Company Management
 - Company registration with service details
 - Blacklisting system for poor performers
 - Complete removal of companies and associated data
 - Service area specification
 
-# 4. Reporting System
+### 4. Reporting System
 - User activity reports
 - Delivery performance analytics
 - Company blacklist management
 - Comprehensive order histories
 
-# 5. Data Persistence
+### 5. Data Persistence
 - Text file storage for all entities
 - Automatic data loading at startup
 - Real-time data synchronization
 - Backup-ready file formats
 
-# File Structure
+## File Structure
 ```
 Courier-Management-System/
 ├── data/                   # Data storage files
@@ -52,39 +51,40 @@ Courier-Management-System/
 │   └── headers/            # Header files
 ├── docs/                   # Documentation
 ├── Makefile                # Build automation
+├── LICENSE                 # GNU GPL v3 License
 └── README.md               # Project documentation
 ```
 
-# Data Storage Design
+## GNU GPL v3 License Terms
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-# Users File Format (`users.txt`)
-```
-username password role
-john_doe pass123 user
-fast_delivery comp456 delivery
-admin@bahria 02134251005 admin
-```
+**Key permissions under this license:**
+- ✅ Commercial use
+- ✅ Distribution
+- ✅ Modification
+- ✅ Patent use
+- ✅ Private use
 
-# Orders File Format (`orders.txt`)
-```
-username|company|parcelType|status|weight|dimensions|specialInstructions|address|orderDate
-john_doe|SpeedyCouriers|Document|Pending|0.5|20x15x5|Fragile|123 Main St|2025-05-30
-```
+**Main conditions:**
+- ❗ Disclose source
+- ❗ License and copyright notice
+- ❗ Same license
+- ❗ State changes
 
-# Company Details Format (`company_details.txt`)
-```
-username|companyName|companyType|baseFare|contactNumber|serviceAreas
-fast_user|QuickDeliver|Express|8.50|555-1234|Downtown,Uptown
-```
+**Limitations:**
+- ✖ Liability
+- ✖ Warranty
 
-# Setup and Installation
+**Full license text:** [LICENSE](LICENSE)
 
-# Prerequisites
+## Setup and Installation
+
+### Prerequisites
 - GCC/G++ compiler (MinGW for Windows)
 - C++17 compatible environment
 - Basic terminal/command prompt knowledge
 
-# Compilation Instructions
+### Compilation Instructions
 1. Clone repository:
 ```bash
 git clone https://github.com/yourusername/courier-management-system.git
@@ -101,36 +101,36 @@ g++ -std=c++17 src/main.cpp -o courier_system
 courier_system.exe # Windows
 ```
 
-# First Run Configuration
+### First Run Configuration
 The system will automatically create required data files if missing. Default admin credentials:
 ```
 Username: admin
 Password: 123
 ```
 
-# Functional Workflows
+## Functional Workflows
 
-# Customer Order Process
+### Customer Order Process
 1. Login → Request Delivery → Enter parcel details → Select delivery date → Choose company → Confirm order
 2. View order history with real-time status
 
-# Delivery Company Process
+### Delivery Company Process
 1. Login → View assigned orders → Update status → Confirm changes
 2. See all active deliveries in dashboard
 
-# Administrator Process
+### Administrator Process
 1. Access reports → Manage companies → Blacklist underperformers
 2. Remove companies with cascade deletion of related data
 
-# Technical Specifications
+## Technical Specifications
 
-# Algorithms Implemented
+### Algorithms Implemented
 1. **Zeller's Congruence Algorithm** - Calculate day of week for calendar
 2. **Data Serialization** - Custom pipe-separated value formatting
 3. **Search Optimization** - Linear search with early termination
 4. **Input Validation** - Multi-layer user input verification
 
-# Data Structures
+### Data Structures
 ```mermaid
 classDiagram
     class Credentials{
@@ -174,16 +174,16 @@ classDiagram
     DeliveryCompanyDetails "1" -- "*" DeliveryRequest : Fulfills
 ```
 
-# Limitations and Future Improvements
+## Limitations and Future Improvements
 
-# Current Limitations
+### Current Limitations
 - Fixed-size arrays limit scalability
 - Plaintext password storage
 - No geographical distance calculations
 - Basic UI without graphics
 - Limited error recovery mechanisms
 
-# Planned Enhancements
+### Planned Enhancements
 1. **Database Integration** - Migrate from text files to SQLite
 2. **Payment Processing** - Integrate payment gateway for transactions
 3. **GIS Functionality** - Add Google Maps API for route optimization
@@ -191,9 +191,9 @@ classDiagram
 5. **Mobile Application** - React Native companion app
 6. **Machine Learning** - Predictive delivery time estimation
 
+   
+**As a GPL-licensed project, all contributions must comply with these terms:**
+1. All derivative works must be licensed under GPL v3
+2. Source code modifications must be clearly documented
+3. Contributors must sign off on license agreement
 
-Contribution Guidelines (GPL Compliance)
-As a GPL-licensed project, all contributions must comply with these terms:
-All derivative works must be licensed under GPL v3
-Source code modifications must be clearly documented
-Contributors must sign off on license agreement
