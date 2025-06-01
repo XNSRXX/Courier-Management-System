@@ -1,4 +1,4 @@
-# Courier Management System - GPL Licensed
+# Courier Management System (Console-Based)- GPL Licensed
 
 ## Overview
 **Courier Management System** is a robust C++ application that simulates a complete courier service ecosystem with three distinct user roles: customers, delivery companies, and administrators. This GPL-licensed system handles end-to-end delivery management including order placement, status tracking, company management, and reporting.
